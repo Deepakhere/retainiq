@@ -7,7 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import images from '../images/images';
 
 export default function Variant({ data, onAddVariant, onDeleteVariant, onEditVariant, showModal, handleCloseModal, setShowModal }) {
-  const [isHovered, setIsHovered] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [file, setFile] = useState(null);
   const [newContent, setNewContent] = useState(data.content);
@@ -44,10 +43,7 @@ export default function Variant({ data, onAddVariant, onDeleteVariant, onEditVar
     <>
       <div className="manageVariant mx-3">
         <div className="card w-100">
-          <Card
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+          <Card>
             <div className="card-img-container"
               style={{
                 padding: '10px 10px 0px 10px',
